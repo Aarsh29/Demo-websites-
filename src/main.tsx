@@ -1,0 +1,19 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { App } from './App';
+import { ThemeProvider } from './context/ThemeContext';
+import { CommerceProvider } from './context/CommerceContext';
+import { SoundProvider } from './context/SoundContext';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <SoundProvider>
+      <CommerceProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </CommerceProvider>
+    </SoundProvider>
+  </React.StrictMode>,
+);
